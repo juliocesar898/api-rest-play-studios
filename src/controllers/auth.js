@@ -1,8 +1,10 @@
 const {
   createNewUser,
   loginUser,
-  ve,
+  changePassword,
+  recoveryPassword,
   verifyAccount,
+  userProfile,
 } = require('../interactors/auth');
 
 const signUp = ({ body }, res, next) =>
@@ -15,9 +17,35 @@ const signIn = ({ body }, res, next) =>
     .then(({ access_token }) => res.status(200).send({ token: access_token }))
     .catch(next);
 
+const profile = ({user: {id}}, res, next) =>
+  userProfile(id)
+  .then((data) => res.status(200).send(data))
+    .catch(next);
+
 const verifyAccountProfile = ({ query: { token } }, res, next) =>
   verifyAccount(token)
     .then((response) => res.status(200).send(response))
     .catch(next);
 
-module.exports = { signUp, signIn, verifyAccountProfile };
+const changeUserPassword = (
+  { user: { id }, body: { newPassword } },
+  res,
+  next
+) =>
+  changePassword(id, newPassword)
+    .then((response) => res.status(204).send(response))
+    .catch(next);
+
+const recoveryUserPassword = ({ body: { email } }, res, next) =>
+  recoveryPassword(email)
+    .then((response) => res.status(200).send(response))
+    .catch(next);
+
+module.exports = {
+  signUp,
+  signIn,
+  profile,
+  verifyAccountProfile,
+  changeUserPassword,
+  recoveryUserPassword,
+};

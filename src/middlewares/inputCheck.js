@@ -15,6 +15,17 @@ const createUserValidation = () => {
   ];
 };
 
+const changePasswordValidation = () => {
+  return [
+    check("newPassword", "newPassword field is required").not().isEmpty(),
+    check("newPassword", "newPassword field must be a string").isString(),
+    check(
+      "newPassword",
+      "newPassword field must greater than 7 and less than 13"
+    ).isLength({ min: 8, max: 12 }),
+  ];
+};
+
 const createBetValidation = () => {
   return [
     check("codeBeat", "codeBeat field is required").not().isEmpty(),
@@ -41,6 +52,7 @@ const validate = (req, res, next) => {
 
 module.exports = {
   createUserValidation,
+  changePasswordValidation,
   validate,
   createBetValidation
 };

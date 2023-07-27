@@ -3,11 +3,11 @@ const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENGRID_API_KEY);
 
 module.exports = {
-  sendMail: async (email, data) => {
+  sendMail: async (email, template, data) => {
     const msg = {
       from: process.env.EMAIL_SENDER_VERIFIED,
       to: email,
-      template_id: process.env.VERIFY_DEVICE_TEMPLATE_ID,
+      template_id: template,
       dynamic_template_data: {
         data
       },
@@ -19,6 +19,9 @@ module.exports = {
     } 
   },
   generateLinkVerification: (token) => {
-    return `${process.env.API_BASE_URL}/auth/verify-account?token=${token}`
-  }
+    return `${process.env.WEBSITE_URL}/auth/verify-account?token=${token}`
+  },
+  generateLinkRecoveryPassword: (token) => {
+    return `${process.env.WEBSITE_URL}/auth/forgot-password?token=${token}`
+  },
 }
