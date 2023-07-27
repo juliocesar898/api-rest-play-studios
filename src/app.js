@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cookieParser());
 
-app.get('/api/health', (_, res) => {
-  res.send('server PlayStudios Ok');
-});
+// app.get('/api/health', (_, res) => {
+//   res.send('server PlayStudios Ok');
+// });
 
 app.use('/api', router);
 
