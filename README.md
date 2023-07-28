@@ -27,7 +27,7 @@ $ npm run dev
 
 ## Create new user ✔
 ```
-curl POST --location 'localhost:4000/api/auth/signup' \
+curl POST --location 'http://24.199.109.40/api/auth/signup' \
 --header 'Content-Type: application/json' \
 --data '{
     "username": "new user",
@@ -40,7 +40,7 @@ curl POST --location 'localhost:4000/api/auth/signup' \
 
 ## Login User 🔐
 ```
-curl POST --location 'localhost:4000/api/auth/signin' \
+curl POST --location 'http://24.199.109.40/api/auth/signin' \
 --header 'Content-Type: application/json' \
 --data '{
     "email": "user1234@testing.com",
@@ -50,12 +50,18 @@ curl POST --location 'localhost:4000/api/auth/signin' \
 
 ## Change Password 🔑
 ```
-curl POST --location 'localhost:4000/api/auth/change-password' \
+curl POST --location 'http://24.199.109.40/api/auth/change-password' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer token' \
 --data '{
     "newPassword": "mypass123456"
 }'
+```
+
+## GEt Profile USer 🔍
+```
+curl --location 'http://24.199.109.40/api/auth/profile' \
+--header 'Authorization: Bearer token'
 ```
 
 ## Deployment 📦
