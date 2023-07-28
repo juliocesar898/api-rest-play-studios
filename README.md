@@ -21,7 +21,9 @@ $ npm install
 $ npm run dev
 ```
 
-📘 Full Swagger GUI are available at http://localhost:40000/api/docs or http://24.199.109.40/api/docs
+📘 Full Swagger GUI are available at http://localhost:40000/api/docs
+
+📡 Full Swagger Online GUI are available ---> http://24.199.109.40/api/docs
 
 ## Create new user ✔
 ```
