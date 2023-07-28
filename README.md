@@ -29,7 +29,7 @@ curl POST --location 'localhost:4000/api/auth/signup' \
 --header 'Content-Type: application/json' \
 --data '{
     "username": "new user",
-    "email": "user123456",
+    "email": "user1234@testing.com",
     "password": "password1234",
     "phone": "+12345678"
 }'
@@ -41,7 +41,7 @@ curl POST --location 'localhost:4000/api/auth/signup' \
 curl POST --location 'localhost:4000/api/auth/signin' \
 --header 'Content-Type: application/json' \
 --data '{
-    "email": "user123456",
+    "email": "user1234@testing.com",
     "password": "password1234"
 }'
 ```
