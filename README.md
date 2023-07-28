@@ -78,9 +78,8 @@ This project was deployed on Digital Ocean, you can see the docs in http://24.19
 ## Author ✒️
 
 * **Julio Flores** - *Initial Work* - [juliocesar898](https://github.com/juliocesar898)
-This project is licensed under the License (Your License) - see the file [LICENSE.md](LICENSE.md) for details
 
 
 
 ---
-⌨️ By [juliocesar898](https://github.com/juliocesar898) 😊
+⌨️ By [juliocesar898](https://github.com/juliocesar898) 📘
