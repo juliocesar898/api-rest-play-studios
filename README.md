@@ -25,6 +25,8 @@ $ npm run dev
 
 📡 Full Swagger Online GUI are available ---> http://24.199.109.40/api/docs
 
+🚀🚀 Actually you can see the api health at http://24.199.109.40/api/health
+
 ## Create new user ✔
 ```
 curl POST --location 'http://24.199.109.40/api/auth/signup' \
