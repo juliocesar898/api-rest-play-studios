@@ -64,11 +64,7 @@ This project was deployed on Digital Ocean, you can see the docs in http://24.19
 
 ## Built with 🛠️
 
-_Mention the tools you used to create your project_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Manager
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS
+* [Nodejs](https://nodejs.org/es/docs) 
 
 
 ## Author ✒️
