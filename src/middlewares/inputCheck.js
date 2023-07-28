@@ -6,6 +6,7 @@ const createUserValidation = () => {
     check("username", "username field must be a string").isString(),
     check("email", "email field is required").not().isEmpty(),
     check("email", "email field must be a string").isString(),
+    check("email", "email field must be formatted as email address").isEmail(),
     check("password", "password field is required").not().isEmpty(),
     check("password", "password field must be a string").isString(),
     check(
