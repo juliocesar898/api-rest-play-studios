@@ -1,4 +1,4 @@
-# Api REst PlayStudios Challenge
+# Api REst PlayStudios
 
 ## Starting 🚀
 
