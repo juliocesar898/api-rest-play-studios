@@ -14,7 +14,7 @@ const saveBet = async (data) => {
 
 const getBets = async (userId) => {
   try {
-    const bets = await Bet.find({});
+    const bets = await Bet.find({ user: userId });
     return bets;
   } catch (error) {
     console.error(error.message);
